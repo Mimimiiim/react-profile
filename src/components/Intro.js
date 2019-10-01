@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 
-const P = styled.p`font-size:1.5rem;`
+const P = styled.p`
+    font-size:1.5rem;
+`
 
 const NameWrapper = styled.div`
     font-size:3rem;
-`;
+`
 
 const Wrapper = styled.div`
     margin-right:1rem;
@@ -16,14 +18,12 @@ const Wrapper = styled.div`
 
 class Intro extends Component {
     render() {
-        var data = this.props.data;
-        var lists = [];
+        let data = this.props.data;
+        let lists = [];
 
-        var alists = [];
-        var j = 0;
-        while (j < data.favoriteAnimal.length) {
-            alists.push(<li key={data.favoriteAnimal[j]}>{data.favoriteAnimal[j]}</li>);
-            j = j + 1;
+        let alists = [];
+        for (let i in data.favoriteAnimal) {
+            alists.push(<li key={data.favoriteAnimal[i]}>{data.favoriteAnimal[i]}</li>);
         }
 
         lists.push(
@@ -34,11 +34,9 @@ class Intro extends Component {
                 <P>{`지금 기분은 ${data.feeling}해요!`}</P>
 
                 <h4>좋아하는 동물</h4>
-                <nav>
-                    <ul>
-                        {alists}
-                    </ul>
-                </nav>
+                <ul>
+                    {alists}
+                </ul>
             </div>
         );
 
