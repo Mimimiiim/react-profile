@@ -1,19 +1,24 @@
 # react-profile
 
-## 실행 방법
+## COMPONENT
 
-```
-npm install
-npm run start
-```
+- Card : 프로필 정보를 담고 있는 컴포넌트
 
-- npm install : 필요한 모든 패키지를 설치합니다. 처음 1번만 실행하면 됩니다.
-- npm run start : react 어플리케이션을 브라우저에서 실행합니다.
+## PROPS
 
-## 미션 설명
+1.Card의 props
+- name : 이름을 담는 props
+- desc[] : 설명을 라인별로 저장해놓은 props
+- likeAnimal[] : 좋아하는 동물리스트를 저장해놓은 props
 
-[미션 설명](./docs/mission-description/README.md)
+## STATE
 
-## 미션 제출 방법
+- card : 한 사람의 name, desc[]를 담는 state
+- animal[] : 한 사람의 좋아하는 동물리스트를 담는 state
 
-[미션 제출 방법](./docs/how-to-submit/README.md)
+## 고민거리
+1. Props와 State는 어떤 상황에서 다르게 사용될까?
+   
+    - props는 부모 컴포넌트가 자식 컴포넌트에게 주는 값들이므로, 자식 컴포넌트에서는 값을 받아오기만 하고 변경하지 못합니다.<br/>
+     하지만 state는 컴포넌트 내부에서 선언하며, 컴포넌트 내부에서 값을 변경할 수 있습니다.<br/>
+     그렇기 때문에 props는 초기값을 저장할 때 또는 defaultValue에 사용되고, state는 변수 값를 얻기 위해 사용됩니다.
