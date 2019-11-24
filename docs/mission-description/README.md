@@ -49,6 +49,8 @@
 
 ## 프로그램 실행 결과
 
+![result](../result.png)
+
 ## 프로그래밍 요구사항
 
 - Props, State를 모두 활용한다.
